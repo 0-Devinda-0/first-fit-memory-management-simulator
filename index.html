@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Website Title</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="mp.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center">First-Fit Memory Management Simulation</h1>
+        <div class="row mt-4">
+            <div class="col-12">
+                
+                <h3>Memory Blocks</h3>
+                <div id="memoryBlocks">
+                    
+                    <!-- Memory blocks will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            
+            <div class="col-12">
+                <h3>Allocate Process</h3>
+                <form id="allocateForm">
+                    <div class="mb-3">
+                        <label for="processSize" class="form-label">Process Size</label>
+                        <input type="number" class="form-control" id="processSize" required>
+                    </div>
+                    <button type="submit" onclick=firstFitAllocate() class="btn btn-primary">Allocate Process</button>
+                    <button onclick=clearAllocatedMemory() class="btn btn-warning">Clear Memory Blocks</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <h3>Log</h3>
+                <ul id="log" class="list-group"></ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- jQuery (Bootstrap JS components) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="mp.js"></script>
+
+</body>
+
+</html>
